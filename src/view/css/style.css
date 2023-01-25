@@ -1,0 +1,211 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    color: #fff;
+    font-family: sans-serif, "Helvetica Neue", "Helvetica", "Arial", "Lucida Grande";
+}
+
+h1, h2, p{
+    margin: 0;
+} 
+
+.invisible{
+    /* display: none !important;  */
+    left: -500px !important;
+}
+
+.invisible2{
+    opacity: 0 !important;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 1080px;
+    background-position: center;
+    background-size: cover;
+    transition: background 3.5s;
+}
+
+.container .weather-body{
+    display: flex;
+    flex-direction: column;
+    margin-top: 55em;
+    padding-left: 45%;
+    width: 100%;
+}
+
+.container .forecast .title{
+    font-size: 1.4em;
+}
+
+.container .forecast{
+    background:rgba(128, 128, 128, 0.438);
+    height: 20em;
+    padding: 2em;
+    position: absolute;
+    top: 20em;
+    left: 40em;
+    right: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .forecast h1{
+    font-size: 3em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.container .forecast .forc{
+    height: 15em;
+    width: auto;
+    margin-top: 4em;
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.container .forecast .forc h3{
+    font-size: 1em;
+    font-weight: bold;
+    color:rgb(233, 233, 233);
+}
+
+.container .forecast .forc .forBox{
+    width: 12%;
+}
+
+.container .forecast .forc svg{
+    width: 4em;
+    height: auto;
+}
+
+.container .forecast .forebox{
+    width: 25%;
+}
+
+.container .burger:hover{
+    cursor: pointer;
+}
+
+.container .information{
+    height: 5em;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+    box-sizing: border-box;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.container .information .t-b{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8em;
+    margin-top: 2em;
+}
+
+.container .information .temp{
+    font-size: 6em;
+}
+
+.container .information .time, .container .information .loc{
+    font-size: 1.5em;
+    line-height: .2em;
+}
+
+.container .information .wIcon svg{
+    height: 4em;
+    width: auto;
+}
+
+.container nav{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-left: auto;
+    padding: 2em;
+    justify-content: right;
+    width: 30%;
+    background-color: rgba(53, 53, 53, 0.438);
+    transition: left 1s;
+    /* filter: blur(8px); */
+    /* -webkit-filter: blur(8px); */ 
+    position: absolute;
+    position: relative;
+    left: 0px;
+}
+
+.container nav .results{
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+.container .burger{
+    position: absolute;
+    z-index: 10;
+    top: 1.5em;
+    left: 2em;
+    height: auto;
+    float: right;
+    width: 2.5em;
+    height: auto;
+    color: #fff;
+}
+
+.container .burger:hover{
+    cursor: pointer;
+}
+
+.container nav .search-bar{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin-top: 4em;
+    margin-bottom: 2em;
+    width: 100%;
+}
+
+
+.container nav .search-bar input{
+    border: none;
+    background: none;
+    color: #fff;
+    border-bottom: 1px solid rgb(197, 197, 197);
+    width: 80%;
+}
+
+.container nav .search-bar .search:hover{
+    cursor: pointer;
+}
+
+
+.container nav .search-bar{
+    border-bottom: 1px solid rgb(184, 184, 184);
+    padding-bottom: 2em;
+}
+
+.container nav h2{
+    margin-bottom: 1.5em;
+    width: 75%;
+    font-size: 0.9em;
+    padding: 1em;
+    font-weight: 200;
+    border-bottom: 1px solid #fff;
+}
+
+.container nav h2:hover{
+    cursor: pointer;
+    background: rgba(156, 156, 156, 0.3);;
+}
+
+
+
+
