@@ -14,7 +14,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); 
 
 app.get('/', (req, res) => {
-    console.log(process.env.API_KEY)
     res.sendFile(path.join(__dirname,'..', 'view', 'index.html'));
 })
 
@@ -38,6 +37,5 @@ app.post('/current', async (req, res) => {
 })
 
 app.listen(8000, () => {
-    console.log(process.env.API_KEY)
     console.log('listening on port 8000');
 })
