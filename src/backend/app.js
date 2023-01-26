@@ -6,8 +6,7 @@ const path = require('path');
 const axios = require('axios');
 
 const app = express();
-require('dotenv').config();
-
+require('dotenv/config');
 app.use(express.static(path.join(__dirname,"../view")));
 
 app.use(bodyParser.json());
@@ -30,6 +29,15 @@ app.post('/forecast', async (req, res) => {
 app.post('/current', async (req, res) => {
     try{
         const response = await axios("http://api.weatherapi.com/v1/current.json?"+process.env.API_KEY+"&q="+req.body.loc+"&aqi=no")
+        res.send(response.data);
+    } catch(error){
+        console.log(error)
+    }
+})
+
+app.post('/autocomp', async (req, res) => {
+    try{
+        const response = await axios("http://api.weatherapi.com/v1/search.json?"+process.env.API_KEY+"&q="+req.body.loc)
         res.send(response.data);
     } catch(error){
         console.log(error)

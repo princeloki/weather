@@ -204,20 +204,32 @@ weather = () =>{
 
     }
 
-    autocomp=(loc)=>{
-        fetch(weatherUrl+autoComp+API_KEY+" &q="+loc)
-        .then(data=>{
-            return data.json();
-        })
-        .then(weather=>{
-            weather.forEach(area=>{
-                let h2 = document.createElement("h2");
-                h2.innerText = area.name+", "+area.country;
-                results.appendChild(h2);
-                results.classList.remove("invisible2");
+
+    async function autocomp(loc){
+        try{
+            const response = await fetch('/autocomp', {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({loc: loc})
             })
-            // h2.innerText = weather.
-        })
+            .then(data => {
+                return data.json();
+            })
+            .then(weather=>{
+                weather.forEach(area=>{
+                    let h2 = document.createElement("h2");
+                    h2.innerText = area.name+", "+area.country;
+                    results.appendChild(h2);
+                    results.classList.remove("invisible2");
+                })
+                // h2.innerText = weather.
+            })
+        } catch(error){
+            console.log(error);
+        }
+        
     }
 
     run(geoLocation);
