@@ -51,11 +51,11 @@ h1, h2, p{
 
 .container .forecast{
     background:rgba(128, 128, 128, 0.438);
-    height: 20em;
+    height: 25em;
     padding: 2em;
     position: absolute;
     top: 20em;
-    left: 40em;
+    left: 15em;
     right: 2em;
     display: flex;
     flex-direction: column;
@@ -70,13 +70,13 @@ h1, h2, p{
 }
 
 .container .forecast .forc{
-    height: 15em;
+    height: 20em;
     width: auto;
-    margin-top: 4em;
+    margin-top: 2em;
     display: flex;
     flex-direction: row;
     flex-flow: row wrap;
-    gap: 3em;
+    gap: 1em;
     text-align: center;
     opacity: 1;
     transition: opacity 1s;
@@ -115,6 +115,7 @@ h1, h2, p{
     opacity: 1;
     transition: opacity 1s;
     position: absolute;
+    justify-content: center;
 }
 
 .container .information .t-b{
@@ -232,8 +233,16 @@ h1, h2, p{
         top: 35em;
     }
 
+    .container .loc{
+        font-size: 1.2em !important;
+    }
+    
+    .container .time{
+        font-size: 1.2em !important;
+    }
+
     .container .information .temp{
-        font-size: 4em;
+        font-size: 3.5em !important;
     }
 
     .forecast{
@@ -258,7 +267,7 @@ h1, h2, p{
         max-width: 100%;
         margin-top: auto !important;
         width: 100% !important;
-        gap: 1em !important;
+        gap: 1.2em !important;
     }
 
     .container .forc .forBox{
@@ -270,11 +279,16 @@ h1, h2, p{
     }
 
     .container .forecast svg{
-        width: 2em !important;
+        width: 1.5em !important;
     }
-    .container .forecast h2{
+
+    .container h2{
         font-size: 1.1em !important;
+        margin-top: 1em !important;
     }
+
+
+
 }
 
 
