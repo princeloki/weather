@@ -229,7 +229,11 @@ h1, h2, p{
         padding-left: 0 !important;
         margin-left: 0 !important;
         left: 1em !important;
-        top: 40em;
+        top: 35em;
+    }
+
+    .container .information .temp{
+        font-size: 4em;
     }
 
     .forecast{
@@ -245,7 +249,9 @@ h1, h2, p{
     }
 
     .container .forecast h1{
-        font-size: 2em;
+        font-size: 1.7em;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
     }
 
     .container .forecast .forc{
