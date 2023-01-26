@@ -37,7 +37,6 @@ app.post('/current', async (req, res) => {
 })
 
 app.listen(process.env.PORT || 3000, () => {
-    console.log(process.env.API_KEY)
     console.log('listening on port 3000');
 })
 
