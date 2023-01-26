@@ -1,6 +1,5 @@
 weather = () =>{
     const weatherUrl =  "http://api.weatherapi.com/v1";
-    const API_KEY = "key=87b256e06a934991a3235926231501";
     // const API_KEY = getKey();
     const current = "/current.json?";
     const forecast = "/forecast.json?";
