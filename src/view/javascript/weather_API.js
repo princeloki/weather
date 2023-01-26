@@ -218,12 +218,19 @@ weather = () =>{
                 return data.json();
             })
             .then(weather=>{
-                weather.forEach(area=>{
+                console.log(weather.length)
+                for(let i=0; i<6;i++){
                     let h2 = document.createElement("h2");
-                    h2.innerText = area.name+", "+area.country;
+                    h2.innerText = weather[i].name+", "+weather[i].country;
                     results.appendChild(h2);
                     results.classList.remove("invisible2");
-                })
+                }
+                // weather.forEach(area=>{
+                //     let h2 = document.createElement("h2");
+                //     h2.innerText = area.name+", "+area.country;
+                //     results.appendChild(h2);
+                //     results.classList.remove("invisible2");
+                // })
                 // h2.innerText = weather.
             })
         } catch(error){
@@ -250,9 +257,11 @@ weather = () =>{
 
     setInterval(()=>{
         let h2 = results.querySelectorAll("h2");
-        h2.forEach(place=>{
-            place.addEventListener("click", ()=>{
-                run(place.innerText)});
+        ["click", "touchstart"].forEach(evt=>{
+            h2.forEach(place=>{
+                place.addEventListener(evt, ()=>{
+                    run(place.innerText)});
+            })
         })
     }, 2000);
  
