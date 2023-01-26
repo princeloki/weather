@@ -6,9 +6,9 @@ const path = require('path');
 const axios = require('axios');
 
 const app = express();
-require("dotenv/config");
+require('dotenv').config();
 
-app.use(express.static("../view"));
+app.use(express.static(path.join(__dirname,"../view")));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); 
@@ -37,5 +37,7 @@ app.post('/current', async (req, res) => {
 })
 
 app.listen(process.env.PORT || 3000, () => {
+    console.log(process.env.API_KEY)
     console.log('listening on port 3000');
 })
+
